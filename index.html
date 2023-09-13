@@ -4,15 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <script src="app.js"></script>
     <title>Pandas</title>
+    <script>
+        let d = new Date();
+        alert("Today's date is " + d);
+    </script>
 </head>
 <body>
+
+
     <body background="wallpaper.jpg>"
     <header>
-        <h1>Pandas</h1>
+        <h1>Pandamonium</h1>
     </header>
     <div>
-        <ul>
+    <ul>
             <li style="display:inline-block;">
                 <a href="page1.html" style="text-decoration:none; color:#00FFFF;"><h1>More on Pandas</h1></a>
             </li>
@@ -24,9 +31,19 @@
             </li>
         </ul>
 
+        <h2>Demo JavaScript in Body</h2>
 
+        <p id="demo">A Panda.</p>
     
-    <main>
+        <button type="button" onclick="myFunction()">Try it</button>
+    
+        <script>
+        function myFunction() {
+        document.getElementById("demo").innerHTML = "No Panda.";
+        }       
+        </script>
+    
+<main>
         <h2>Pandas: Why do people love them?</h2>
         <p>It is never that easy to spot a panda. The factor that this animal is super rare makes it very popular. 
         The popularity comes by since everyone gets amazed after setting eyes on it.
@@ -37,6 +54,7 @@
     <img src="https://images.pexels.com/photos/3608263/pexels-photo-3608263.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt= "pandapic" id="pic">
 </div>
 
+
 <div>
     <img src="pandapic.jpg" alt="pandaeating" id="pandapic"
 </div>
@@ -45,7 +63,40 @@
     <img src="pandaba.jpg" alt="pandabamboo" id="pandabamboo"
 </div>
 
+<!-- Slideshow container -->
+<div class="slideshow-container">
 
+    <!-- Full-width images with number and caption text -->
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 3</div>
+      <img src="pandaba.jpg" style="width:100%">
+      <div class="text">Caption Text</div>
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 3</div>
+      <img src="pandapic.jpg" style="width:100%">
+      <div class="text">Caption Two</div>
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 3</div>
+      <img src="wallpaper.jpg" style="width:100%">
+      <div class="text">Caption Three</div>
+    </div>
+  
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+  
+  <!-- The dots/circles -->
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
 
 
 

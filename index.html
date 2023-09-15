@@ -6,12 +6,27 @@
     <link rel="stylesheet" href="styles.css">
     <script src="./app.js"></script>
     <title>Pandas</title>
-    <script>
-        let d = new Date();
-        alert("Today's date is " + d);
-    </script>
+
+<div class="topnav">
+    <a class="active" href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+    <input type="text" placeholder="Search..">
+  </div>
+
+
+
 </head>
 <body>
+    <script>
+        greet()
+        askTime()
+    </script>
+
+    <button onclick="getElementById('datentime').innerHTML=Date()">Click for date and time</button>
+
+    <p id="datentime"></p></button>
+
 <header>
         <h1>Pandamonium</h1>
 </header> 
@@ -29,38 +44,60 @@
             </div>
             </li>
         </ul>
-
     
 <main>
-        <h2>All about Pandas</h2>
-        <br>
-        <p>It is never that easy to spot a panda. The factor that this animal is super rare makes it very popular. 
-        The popularity comes by since everyone gets amazed after setting eyes on it.
-        The amusement of seeing a giant panda comes to another extent, whether its the 1st time you are seeing it or not.
-        In the wild, there are only 1600 giant pandas. A good number of giant pandas are in captivity, mostly in zoos.
-        The total number of giant pandas in captivity ranges above 300 in China.</p>
 
+    <button onclick="getRating ()">Rate my website</button>
+    <script>
+        function getRating () {
+            let rating = prompt("What rating will you give 1-5?");
+            console.log(rating);
+        }
+    </script>
+
+
+<h2>All about Pandas</h2>
+<br>
+<p>It is never that easy to spot a panda. The factor that this animal is super rare makes it very popular. 
+The popularity comes by since everyone gets amazed after setting eyes on it.
+The amusement of seeing a giant panda comes to another extent, whether its the 1st time you are seeing it or not.
+ In the wild, there are only 1600 giant pandas. A good number of giant pandas are in captivity, mostly in zoos.
+The total number of giant pandas in captivity ranges above 300 in China.</p>
+
+</main>
+<img class="mySlides" src="pandatree.jpg">
+<img class="mySlides" src="pandasleep.jpg">
+<img class="mySlides" src="pandapic.jpg">
+<img class="mySlides" src="pandafamily.jpg">
+<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+
+<script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+    
+    function plusDivs(n) {
+      showDivs(slideIndex += n);
+    }
+    
+    function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      if (n > x.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = x.length}
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      x[slideIndex-1].style.display = "block";  
+    }
+    </script>
     
 
-        
-    </main>
-
-    <div class="image-slideshow">
-      <div class="image fade">
-      <img src="pandaba.jpg" alt="PandaBamboo">
-      </div>        
-      <div class="image fade">
-      <img src="pandafamily.jpg" alt="Panda family">
-      </div>        
-      <div class="image fade">
-      <img src="pandasleep.jpg" alt="panda sleep">
-      </div>
-      <div class="image fade">
-        <img src="pandatree.jpg" alt="Panda family">
-        </div>        
+    <button id="showButton">Show Picture</button>
+    <div id="imageContainer">
+        <img id="hiddenImage" src="pandaba.jpg" alt="Hidden Image">
     </div>
-    <script src="./app.js"></script>
-    
-    
+    <script src="script.js"></script>
+
 </body>
 </html>

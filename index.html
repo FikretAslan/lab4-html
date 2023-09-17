@@ -18,10 +18,22 @@
 
 </head>
 <body>
-    <script>
-        greet()
-        askTime()
-    </script>
+    <p>
+        <script>
+            greet();
+        </script>
+    </p>
+
+    <p>
+        <script>
+            askTime();
+        </script>
+    </p>
+    <p>
+        <script>
+            getRating();
+        </script>
+    </p>
 
     <button onclick="getElementById('datentime').innerHTML=Date()">Click for date and time</button>
 
@@ -50,10 +62,15 @@
     <button onclick="getRating ()">Rate my website</button>
     <script>
         function getRating () {
-            let rating = prompt("What rating will you give 1-5?");
-            console.log(rating);
-        }
-    </script>
+            let rating = prompt('Rate Pandamonium between 1-5','5');
+            while (rating < 0 || rating >= 5) {
+      rating = prompt('Please enter a number 5 or lower!')
+    }
+    for (let i = 0; i < rating; i++) {
+        document.write("<img src='pandarating.jpg'/>")
+    }
+}
+ </script>
 
 
 <h2>All about Pandas</h2>
@@ -90,7 +107,7 @@ The total number of giant pandas in captivity ranges above 300 in China.</p>
       }
       x[slideIndex-1].style.display = "block";  
     }
-    </script>
+    </scrip>
     
 
     <button id="showButton">Show Picture</button>
